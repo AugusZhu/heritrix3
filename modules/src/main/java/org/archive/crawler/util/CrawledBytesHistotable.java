@@ -67,14 +67,14 @@ implements CoreAttributeConstants {
             tally(NOVELCOUNT,1);
         }
         Map<String,Map<String,Long>> warcStats = (Map<String,Map<String,Long>>) curi.getData().get(A_WARC_STATS);
-        if (warcStats != null) {
-            tally(WARC_NOVEL_CONTENT_BYTES,
-                    WARCWriter.getStat(warcStats, "response", "contentBytes")
-                    + WARCWriter.getStat(warcStats, "resource", "contentBytes"));
-            tally(WARC_NOVEL_URLS,
-                    WARCWriter.getStat(warcStats, "response", "numRecords")
-                    + WARCWriter.getStat(warcStats, "resource", "numRecords"));
-        }
+//        if (warcStats != null) {
+//            tally(WARC_NOVEL_CONTENT_BYTES,
+//                    WARCWriter.getStat(warcStats, "response", "contentBytes")
+//                    + WARCWriter.getStat(warcStats, "resource", "contentBytes"));
+//            tally(WARC_NOVEL_URLS,
+//                    WARCWriter.getStat(warcStats, "response", "numRecords")
+//                    + WARCWriter.getStat(warcStats, "resource", "numRecords"));
+//        }
     }
     
     public String summary() {
